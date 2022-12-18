@@ -35,14 +35,7 @@ Rsrc2 : 2nd operand register
 Rdst  : result register  
 EA    : Effective address (20 bit)  
 Imm   : Immediate Value (16 bit)  
-
+AAAA	
 	
 	
-	
-	
-
-	
-	
-	
-
-
+CCC	
