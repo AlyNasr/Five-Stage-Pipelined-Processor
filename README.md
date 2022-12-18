@@ -38,6 +38,6 @@ Imm   : Immediate Value (16 bit)
 
 | Mnemonic      | Function      | 
 | ------------- |:-------------:| 
-| col 3 is      | right-aligned | 
+| NOP           |  PC ← PC + 1  |  
 | col 2 is      | centered      | 
 | zebra stripes | are neat      | 
