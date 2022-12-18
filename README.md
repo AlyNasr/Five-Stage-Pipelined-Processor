@@ -39,32 +39,16 @@ Imm   : Immediate Value (16 bit)
 | Mnemonic      | Function      | 
 | ------------- |:-------------:| 
 | NOP           |  PC ← PC + 1  |  
-| SETC      | C ←1      | 
-| CLRC | C ←0      | 
+| SETC          | C ←1      | 
+| CLRC          | C ←0      | 
 | NOT Rdst      | NOT value stored in register Rdst<br> R[ Rdst ] ← 1’s Complement(R[ Rdst ]);<br>If (1’s Complement(R[ Rdst ]) = 0): Z ←1; else: Z ←0;<br>  If (1’s Complement(R[ Rdst ]) < 0): N ←1; else: N ←0|   
-| INC Rdst | Increment value stored in Rdst  
-R[ Rdst ] ←R[ Rdst ] + 1;   
-If ((R[ Rdst ] + 1) = 0): Z ←1; else: Z ←0;  
-If ((R[ Rdst ] + 1) < 0): N ←1; else: N ←0  
-      | 
-| col 2 is      | centered      | 
-| zebra stripes | are neat      | 
-| col 2 is      | centered      | 
+| INC Rdst      | Increment value stored in Rdst<br> R[ Rdst ] ←R[ Rdst ] + 1;<br> If ((R[ Rdst ] + 1) = 0): Z ←1; else: Z ←0;<br> If ((R[ Rdst ] + 1) < 0): N ←1; else: N ←0|  
+| DEC Rdst      | Decrement value stored in Rdst<br>R[ Rdst ] ←R[ Rdst ] – 1; <br>If ((R[ Rdst ] – 1) = 0): Z ←1; else: Z ←0;<br>If ((R[ Rdst ] – 1) < 0): N ←1; else: N ←0|  
+| OUT Rdst      | OUT.PORT ← R[ Rdst ]| 
+| IN Rdst       | R[ Rdst ] ←IN.PORT| 
 | zebra stripes | are neat      | 
 | col 2 is      | centered      | 
 | zebra stripes | are neat      | 
 
 
 
-INC Rdst
-Increment value stored in Rdst  
-R[ Rdst ] ←R[ Rdst ] + 1;   
-If ((R[ Rdst ] + 1) = 0): Z ←1; else: Z ←0;  
-If ((R[ Rdst ] + 1) < 0): N ←1; else: N ←0  
-DEC Rdst
-Decrement value stored in Rdst
-R[ Rdst ] ←R[ Rdst ] – 1; 
-If ((R[ Rdst ] – 1) = 0): Z ←1; else: Z ←0;
-If ((R[ Rdst ] – 1) < 0): N ←1; else: N ←0
-OUT Rdst OUT.PORT ← R[ Rdst ]
-IN Rdst R[ Rdst ] ←IN.PORT
