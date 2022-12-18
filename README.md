@@ -36,6 +36,10 @@ Rdst  : result register
 EA    : Effective address (20 bit)  
 Imm   : Immediate Value (16 bit)  
 
+### D) Instructions
+
+#### One Operand
+
 | Mnemonic      | Function      | 
 | ------------- |:-------------:| 
 | NOP           |  PC ← PC + 1  |  
@@ -79,6 +83,11 @@ Imm   : Immediate Value (16 bit)
 | CALL Rdst| (M[SP] ← PC + 1; sp-2; PC ← R[ Rdst ])|  
 | RET| sp+2, PC ←M[SP]|    
 | RTI| sp+2; PC ← M[SP]; Flags restored|  
+
+| Mnemonic      | Function      | 
+| ------------- |:-------------:| 
+| Reset    |  PC ←{M[1], M[0]} //memory location of zero|  
+| Interrupt| M[Sp]←PC; sp-2;PC ← {M[3],M[2]}; Flags preserved| 
 
 
 
