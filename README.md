@@ -70,8 +70,15 @@ Imm   : Immediate Value (16 bit)
 | STD Rsrc| EA Store value in register Rsrc to memory location EA<br> M[EA] ←R[Rsrc];|  
 
 
+| Mnemonic      | Function      | 
+| ------------- |:-------------:| 
+| JZ Rdst|  Jump if zero<br>If (Z=1): PC ←R[ Rdst ]; (Z=0)|  
+| JN Rdst| Jump if negative<br>If (N=1): PC ←R[ Rdst ]; (N=0)| 
+| JC Rdst| Jump if negative<br> If (C=1): PC ←R[ Rdst ]; (C=0)|  
+| JMP Rdst| Jump<br> PC ←R[ Rdst ]|    
+| CALL Rdst| (M[SP] ← PC + 1; sp-2; PC ← R[ Rdst ])|  
+| RET| sp+2, PC ←M[SP]|    
+| RTI| sp+2; PC ← M[SP]; Flags restored|  
 
 
-STD Rsrc, EA Store value in register Rsrc to memory location EA
-2
-M[EA] ←R[Rsrc]; 
+
