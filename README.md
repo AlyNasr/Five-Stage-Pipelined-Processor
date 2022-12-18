@@ -38,7 +38,7 @@ Imm   : Immediate Value (16 bit)
 
 ### D) Instructions
 
-#### One Operand
+#### One Operand instructions
 
 | Mnemonic      | Function      | 
 | ------------- |:-------------:| 
@@ -51,6 +51,7 @@ Imm   : Immediate Value (16 bit)
 | OUT Rdst      | OUT.PORT ← R[ Rdst ]| 
 | IN Rdst       | R[ Rdst ] ←IN.PORT| 
 
+#### Two Operands instructions
 
 | Mnemonic      | Function      | 
 | ------------- |:-------------:| 
@@ -63,7 +64,7 @@ Imm   : Immediate Value (16 bit)
 | SHL Rsrc      | Imm Shift left Rsrc by #Imm bits and store result in same register<br>Don’t forget to update carry| 
 | SHR Rsrc      | Imm Shift right Rsrc by #Imm bits and store result in same register<br>Don’t forget to update carry| 
 
-
+#### Memory Operations
 
 | Mnemonic      | Function      | 
 | ------------- |:-------------:| 
@@ -73,6 +74,7 @@ Imm   : Immediate Value (16 bit)
 | LDD Rdst| EA Load value from memory address EA to register Rdst<br> R[ Rdst ] ← M[EA];|    
 | STD Rsrc| EA Store value in register Rsrc to memory location EA<br> M[EA] ←R[Rsrc];|  
 
+#### Branch and change of control operations
 
 | Mnemonic      | Function      | 
 | ------------- |:-------------:| 
@@ -83,6 +85,8 @@ Imm   : Immediate Value (16 bit)
 | CALL Rdst| (M[SP] ← PC + 1; sp-2; PC ← R[ Rdst ])|  
 | RET| sp+2, PC ←M[SP]|    
 | RTI| sp+2; PC ← M[SP]; Flags restored|  
+
+#### Input signals
 
 | Mnemonic      | Function      | 
 | ------------- |:-------------:| 
