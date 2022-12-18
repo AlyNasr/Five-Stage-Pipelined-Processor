@@ -60,3 +60,18 @@ Imm   : Immediate Value (16 bit)
 | SHR Rsrc      | Imm Shift right Rsrc by #Imm bits and store result in same register<br>Don’t forget to update carry| 
 
 
+
+| Mnemonic      | Function      | 
+| ------------- |:-------------:| 
+| PUSH Rdst|  M[SP--] ← R[ Rdst ];|  
+| POP Rdst| R[ Rdst ] ← M[++SP];| 
+| LDM Rdst| Imm Load immediate value (16 bit) to register Rdst<br> R[ Rdst ] ← {0,Imm<15:0>}|  
+| LDD Rdst| EA Load value from memory address EA to register Rdst<br> R[ Rdst ] ← M[EA];|    
+| STD Rsrc| EA Store value in register Rsrc to memory location EA<br> M[EA] ←R[Rsrc];|  
+
+
+
+
+STD Rsrc, EA Store value in register Rsrc to memory location EA
+2
+M[EA] ←R[Rsrc]; 
