@@ -1,2 +1,1 @@
-# Five-Stage-Pipelined-Processor
-Harvard Architecture - Five Stage Pipelined Processor
+# Five-Stage-Pipelined-Processor-Harvard-Architecture  
