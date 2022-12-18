@@ -98,5 +98,5 @@ Imm   : Immediate Value (16 bit)
 The processor is implemented in five pipelined stages which are Instruction Fetch **(IF)**, Instruction Decode **(ID)**, Execute **(EX)**, Memory Access **(MEM)** and Register Write Back **(WB)**. There are four buffer registers, one between each two successive stages. The buffer registers are **IF/ID**, **ID/EX**,
 **EX/MEM** and **MEM/WB**.
 
-![Design Schema](/repository/Schema/Design Schema.png?raw=true "Design Schema title")
+![Design_Schema](/Schema/Design Schema.png)
 
