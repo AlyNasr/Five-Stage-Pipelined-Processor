@@ -46,9 +46,30 @@ Imm   : Immediate Value (16 bit)
 | DEC Rdst      | Decrement value stored in Rdst<br>R[ Rdst ] ←R[ Rdst ] – 1; <br>If ((R[ Rdst ] – 1) = 0): Z ←1; else: Z ←0;<br>If ((R[ Rdst ] – 1) < 0): N ←1; else: N ←0|  
 | OUT Rdst      | OUT.PORT ← R[ Rdst ]| 
 | IN Rdst       | R[ Rdst ] ←IN.PORT| 
-| zebra stripes | are neat      | 
-| col 2 is      | centered      | 
-| zebra stripes | are neat      | 
 
+
+| Mnemonic      | Function      | 
+| ------------- |:-------------:| 
+| SWAP Rsrc, Rdst|  Store the value of Rsrc 1 in Rdst and the value of Rdst in Rsc1
+flag shouldn’t change|  
+| ADD Rsrc1,Rsrc2, Rdst| Add the values stored in registers Rsrc1, Rsrc2<br>and store the result in Rdst<br>If the result =0 then Z ←1; else: Z ←0;<br>If the result <0 then N ←1; else: N ←0| 
+| IADD Rsrc1,Rdst,Imm| Add the values stored in registers Rsrc1 to Immediate Value<br>and store the result in Rdst<br>If the result =0 then Z ←1; else: Z ←0;<br>
+If the result <0 then N ←1; else: N ←0| 
+| SUB Rsrc1,Rsrc2, Rdst| Subtract the values stored in registers Rsrc1, Rsrc2<br>
+and store the result in Rdst<br>
+If the result =0 then Z ←1; else: Z ←0;<br>
+If the result <0 then N ←1; else: N ←0|   
+| AND Rsrc1,Rsrc2, Rdst| AND the values stored in registers Rsrc1, Rsrc2<br>
+and store the result in Rdst<br>
+If the result =0 then Z ←1; else: Z ←0;<br>
+If the result <0 then N ←1; else: N ←0|  
+| OR Rsrc1, Rsrc2,Rdst| OR the values stored in registers Rsrc1, Rsrc2<br>
+and store the result in Rdst<br>
+If the result =0 then Z ←1; else: Z ←0;<br>
+If the result <0 then N ←1; else: N ←0|  
+| SHL Rsrc      | Imm Shift left Rsrc by #Imm bits and store result in same register<br>
+Don’t forget to update carry| 
+| SHR Rsrc       | Imm Shift right Rsrc by #Imm bits and store result in same register<br>
+Don’t forget to update carry| 
 
 
