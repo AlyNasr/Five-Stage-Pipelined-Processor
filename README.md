@@ -54,11 +54,11 @@ Imm   : Immediate Value (16 bit)
 flag shouldn’t change|  
 | ADD Rsrc1,Rsrc2, Rdst| Add the values stored in registers Rsrc1, Rsrc2<br>and store the result in Rdst<br>If the result =0 then Z ←1; else: Z ←0;<br>If the result <0 then N ←1; else: N ←0| 
 | IADD Rsrc1,Rdst,Imm| Add the values stored in registers Rsrc1 to Immediate Value<br>and store the result in Rdst<br>If the result =0 then Z ←1; else: Z ←0;<br>
-If the result <0 then N ←1; else: N ←0| 
+If the result <0 then N ←1; else: N ←0|  
 | SUB Rsrc1,Rsrc2, Rdst| Subtract the values stored in registers Rsrc1, Rsrc2<br>
 and store the result in Rdst<br>
 If the result =0 then Z ←1; else: Z ←0;<br>
-If the result <0 then N ←1; else: N ←0|   
+If the result <0 then N ←1; else: N ←0|    
 | AND Rsrc1,Rsrc2, Rdst| AND the values stored in registers Rsrc1, Rsrc2<br>
 and store the result in Rdst<br>
 If the result =0 then Z ←1; else: Z ←0;<br>
