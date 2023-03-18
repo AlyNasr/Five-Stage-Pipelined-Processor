@@ -13,6 +13,12 @@ the stack, and PC is loaded from address [2-3] of the memory (the address takes 
 return from an interrupt, an RTI instruction loads PC from the top of stack, and the flow of the
 program resumes from the instruction after the interrupted instruction.  
 
+## Design
+The processor is implemented in five pipelined stages which are Instruction Fetch **(IF)**, Instruction Decode **(ID)**, Execute **(EX)**, Memory Access **(MEM)** and Register Write Back **(WB)**. There are four buffer registers, one between each two successive stages. The buffer registers are **IF/ID**, **ID/EX**,
+**EX/MEM** and **MEM/WB**.
+
+![Design_Schema](schema.png)
+
 ## ISA Specifications
 ### A) Registers
 R[0:7]<31:0> : Eight 32-bit general purpose registers  
@@ -94,9 +100,4 @@ Imm   : Immediate Value (16 bit)
 | Interrupt| M[Sp]←PC; sp-2;PC ← {M[3],M[2]}; Flags preserved| 
 
 
-## Design
-The processor is implemented in five pipelined stages which are Instruction Fetch **(IF)**, Instruction Decode **(ID)**, Execute **(EX)**, Memory Access **(MEM)** and Register Write Back **(WB)**. There are four buffer registers, one between each two successive stages. The buffer registers are **IF/ID**, **ID/EX**,
-**EX/MEM** and **MEM/WB**.
-
-![Design_Schema](schema.png)
 
