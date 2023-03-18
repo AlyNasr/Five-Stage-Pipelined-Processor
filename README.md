@@ -1,4 +1,8 @@
 # Five-Stage-Pipelined-Processor-Harvard-Architecture 
+## Design
+The processor is implemented in five pipelined stages which are Instruction Fetch **(IF)**, Instruction Decode **(ID)**, Execute **(EX)**, Memory Access **(MEM)** and Register Write Back **(WB)**. There are four buffer registers, one between each two successive stages. The buffer registers are **IF/ID**, **ID/EX**,
+**EX/MEM** and **MEM/WB**.
+
 ## Introduction
 The processor in this project has a RISC-like instruction set architecture.  
 There are eight 4-byte general purpose registers; R0, till R7. Another two general purpose registers, one works as program
@@ -12,10 +16,6 @@ have already entered the pipeline), then the address of the next instruction (in
 the stack, and PC is loaded from address [2-3] of the memory (the address takes two words). To
 return from an interrupt, an RTI instruction loads PC from the top of stack, and the flow of the
 program resumes from the instruction after the interrupted instruction.  
-
-## Design
-The processor is implemented in five pipelined stages which are Instruction Fetch **(IF)**, Instruction Decode **(ID)**, Execute **(EX)**, Memory Access **(MEM)** and Register Write Back **(WB)**. There are four buffer registers, one between each two successive stages. The buffer registers are **IF/ID**, **ID/EX**,
-**EX/MEM** and **MEM/WB**.
 
 ![Design_Schema](schema.png)
 
